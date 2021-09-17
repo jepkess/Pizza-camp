@@ -7,4 +7,10 @@ body{
     background-repeat: none;
     background-size: cover;
 }
+hr{
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    color: hotpink;
+}
 
