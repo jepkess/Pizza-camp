@@ -1,5 +1,10 @@
 body{
+    background-color: honeydew;
+
+}
+.container{
     background-image: url(../images/image\ 3.jpeg);
     background-repeat: none;
     background-size: cover;
 }
+
