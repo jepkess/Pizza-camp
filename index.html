@@ -22,49 +22,81 @@
             <p class="">Enjoy the super amazing taste of the Double Stack Pizza with your family and friends</p>
             <button id="makeorderbtn" class="btn bg-primary text-white">Make order</button>
         </div>
-        <br>
-        <hr>
-        <form id="myform">
-            <div class="form-group name">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <form id="myform">
+                    <div class="form-group name">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Select Pizza size:</label>
+                        <select class="form-select" aria-label="Default select example" id="size">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="topping">Select your favourite topping:</label>
+                        <select class="form-select" aria-label="Default select example" id="topping">
+                            <option value="Green peppers">Green peppers</option>
+                            <option value="Spinach">Spinach</option>
+                            <option value="Pineapple">Pineapple</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="crust">Select your favourite crust:</label>
+                        <select class="form-select" aria-label="Default select example" id="crust">
+                            <option value="Cheese-Stuffed Crust">Cheese-Stuffed Crust</option>
+                            <option value="Flatbread">Flatbread</option>
+                            <option value="Sicilian Style">Sicilian Style</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn bg-danger">check Out</button>
+                    <button type="button" class="btn bg-danger" id="cancel">Cancel</button>
+
+                </form>
             </div>
-            <div class="form-group">
-                <label for="size">Select Pizza size:</label>
-                <select class="form-select" aria-label="Default select example" id="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="topping">Select your favourite topping:</label>
-                <select class="form-select" aria-label="Default select example" id="topping">
-                    <option value="Green peppers">Green peppers</option>
-                    <option value="Spinach">Spinach</option>
-                    <option value="Pineapple">Pineapple</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="crust">Select your favourite crust:</label>
-                <select class="form-select" aria-label="Default select example" id="crust">
-                    <option value="Cheese-Stuffed Crust">Cheese-Stuffed Crust</option>
-                    <option value="Flatbread">Flatbread</option>
-                    <option value="Sicilian Style">Sicilian Style</option>
-                </select>
-            </div>
-            <button type="submit" class="btn bg-danger">check Out</button>
-            <button type="button" class="btn bg-danger" id="cancel">Cancel</button>
+            <div class="row d-flex justify-content-center">
 
-        </form>
+                <div class="col-md-7">
+                    <div class="cart card card-body text-success">
+                        <h2>My order</h2>
+                        <p>Welcome, <span id="somename"></span></p>
 
 
 
+                        <ol id="fullorder"> </ol>
+
+                        <p>Total Cost: <span id="totalcost"></span>Kshs.</p>
+
+                        <div class="form-group">
+                            <div id="mylocation">
+                                <label for="location">Input Location:</label>
+                                <input type="text" id="location">
+                                <p><span id="success"> Delivery fee is fixed with Ksh.200.</span></p>
+                                <p id="successtext" class="card bg-white"><span id="sname"></span>, your order is
+                                    <strong>successfull</strong> ,
+                                    it
+                                    will be delivered to <span id="place"></span>.In case of inconvience , please feel
+                                    free
+                                    to
+                                    reach us.</p>
+                            </div>
+                            <button class="btn bg-danger" id="complete">Complete Order</button>
+                            <button class="btn bg-success text-white">Clear</button>
+
+
+                        </div>
 
 
 
 
-    </div>
+
+
+                    </div>
 
 </body>
 
