@@ -3,7 +3,7 @@ body{
 
 }
 .container{
-    background-image: url(../images/image\ 3.jpeg);
+    background-image: url(/images/image\ 6.jpeg);
     background-repeat: none;
     background-size: cover;
 }
@@ -12,5 +12,25 @@ hr{
     display:flex;
     justify-content: center;
     color: hotpink;
+}
+#myform {
+    display: none;
+    color: aqua;
+}
+.imagesection>div>img{
+    height: 250px;
+    width: 250px;
+    border-radius: 80%;
+    border: 2px solid rgb(69, 192, 201);
+    box-shadow: 0px 2px 2px 3px rgb(179, 62, 8);
+    justify-content: space-between;
+    
+
+}
+.cart{
+    display: none;
+}
+.row{
+    
 }
 
