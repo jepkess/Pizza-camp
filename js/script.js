@@ -13,10 +13,52 @@ $(document).ready(function () {
     $("form#myform").submit(function(event) {
         event.preventDefault();
 
-        var inputtedname = $("input#new-name").val();
-        var inputtedsize = $("input#new-size").val();
-        var inputtedtopping = $("input#new-topping").val();
-        var inputtedcrust = $("input#new-crust").val();
+        var inputtedname = $("input#name").val();
+        var inputtedsize = $("input#size").val();
+        var inputtedtopping = $("input#topping").val();
+        var inputtedcrust = $("input#crust").val();
+
+        var fullOrder= new Order(inputtedsize, inputtedtopping, inputtedcrust);
+
+
+
+        
+        var sizeprice, toppingprice, crustprice = 0;
+        // sizeprice logic conditions
+        if (inputtedsize == "large") {
+            sizeprice = 2500;
+        } else if (inputtedsize == "medium") {
+            sizeprice = 1000;
+        }
+        else if (inputtedsize == "small"){
+            sizeprice = 500;
+        }
+         // toppingprice logic conditions
+
+        if (inputtedtopping == "large") {
+            sizeprice = 200;
+        } else if (inputtedtopping == "medium"){
+            sizeprice= 150;
+        
+        }else if (inputtedtopping == "small"){
+            sizeprice=100;
+        }
+         // crustprice logic conditions
+         if (inputtedcrust == "large"){
+             sizeprice=150;
+         }else if (inputtedcrust == "medium"){
+             sizeprice=100;
+            
+         } else if (inputtedcrust == "small"){
+             sizeprice=50;
+         }
+
+         const total = sizeprice + toppingprice + crustprice;
+
+
+
+
+
 
 
     }
