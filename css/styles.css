@@ -14,7 +14,7 @@ hr{
     color: hotpink;
 }
 #myform {
-    /* display: none; */
+    display: none;
     color: aqua;
 }
 .imagesection>div>img{

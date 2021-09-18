@@ -56,14 +56,22 @@ $(document).ready(function () {
          const total = sizeprice + toppingprice + crustprice;
     
          $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-         var totalcost=0; 
-         
+         var totalcost=0;
+
+ 
+    })
+    
+});
 
 
+$(document).ready(function () {
+    $("#makeorderbtn").on("click", function () {
+        $("form#myform").slideDown();
+        $(this).text("Make another order");
+        $("#checkoutbtn").show();
+    })
+    $("#cancel").on("click", function () {
+        $("form#myform").slideUp();
 
-
-
-
-
-    }
-})
+    })
+});
