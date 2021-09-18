@@ -57,6 +57,7 @@ $(document).ready(function () {
     
          $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
          var totalcost=0;
+         
 
  
     })
@@ -74,4 +75,6 @@ $(document).ready(function () {
         $("form#myform").slideUp();
 
     })
+    
+    
 });
