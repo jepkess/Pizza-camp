@@ -54,6 +54,10 @@ $(document).ready(function () {
          }
 
          const total = sizeprice + toppingprice + crustprice;
+    
+         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
+         var totalcost=0; 
+         
 
 
 
