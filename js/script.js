@@ -22,7 +22,7 @@ $(document).ready(function () {
     $("#check").on("click", function () {
         $(".cart").show();
         $("form#myform").hide();
-        
+
 
 
 
@@ -31,75 +31,79 @@ $(document).ready(function () {
 
 });
 
+
+// var inputtedsize = document.getElementById("inputtedsize").value;
+// console.log("inputtedsize")
 
 $(document).ready(function () {
-$("form#myform").submit(function (event) {
-    event.preventDefault();
+    $("form#myform").submit(function (event) {
+        event.preventDefault();
 
-    var inputtedname = $("input#name").val();
-    var inputtedsize = $("input#size").val();
-    var inputtedtopping = $("input#topping").val();
-    var inputtedcrust = $("input#crust").val();
+        var inputtedname = $("input#name").val();
+        var inputtedsize = $("#size").find(":selected").val();
+        var inputtedtopping = $("#topping").val();
+        var inputtedcrust = $("#crust").val();
 
-    var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
+        var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
+
+      
+
+        var sizeprice, toppingprice, crustprice = 0;
+        // sizeprice logic conditions
+        if (inputtedsize == "large") {
+            sizeprice = 2500;
+        } else if (inputtedsize == "medium") {
+            sizeprice = 1000;
+        } else if (inputtedsize == "small") {
+            sizeprice = 500;
+        }
+        // toppingprice logic conditions
+
+        if (inputtedtopping == "green peppers") {
+            toppingprice = 200;
+        } else if (inputtedtopping == "spinach") {
+            toppingprice = 150;
+
+        } else if (inputtedtopping == "pineapple") {
+            toppingprice = 100;
+        }
+        // crustprice logic conditions
+        if (inputtedcrust == "cheese-Stuffed Crust") {
+            crustprice = 150;
+        } else if (inputtedcrust == "flatbread") {
+            crustprice = 100;
+
+        } else if (inputtedcrust == "sicilian Style") {
+            crustprice = 50;
+        }
+
+        const total = sizeprice + toppingprice + crustprice;
+        console.log(total)
 
 
 
+        $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
+        var totalcost = 0;
+        var totalcost = totalcost + total;
 
-    var sizeprice, toppingprice, crustprice = 0;
-    // sizeprice logic conditions
-    if (inputtedsize == "large") {
-        sizeprice = 2500;
-    } else if (inputtedsize == "medium") {
-        sizeprice = 1000;
-    } else if (inputtedsize == "small") {
-        sizeprice = 500;
-    }
-    // toppingprice logic conditions
-
-    if (inputtedtopping == "large") {
-        sizeprice = 200;
-    } else if (inputtedtopping == "medium") {
-        sizeprice = 150;
-
-    } else if (inputtedtopping == "small") {
-        sizeprice = 100;
-    }
-    // crustprice logic conditions
-    if (inputtedcrust == "large") {
-        sizeprice = 150;
-    } else if (inputtedcrust == "medium") {
-        sizeprice = 100;
-
-    } else if (inputtedcrust == "small") {
-        sizeprice = 50;
-    }
-
-    const total = sizeprice + toppingprice + crustprice;
-
-
-    $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-    var totalcost = 0;
-    var totalcost = totalcost + total;
+        var inputtedlocation = $("#location").val();
+        console.log(inputtedlocation)
+        
 
   
-    $("#totalcost").append(totalcost);
-    $("#somename").append(inputedname);
-    $("#place").append(inputtedlocation);
-    $(".name").show();
-    $("#name").append(inputedname).val("");
-    $("form#myform").slideUp();
-    $(".cart").show();
-    $("#complete").on("click", function () {
-        $("#successtext").show();
-        $("#place").html(inputtedlocation).val();
-        $("#sname").append(inputedname).val();
+        $("#totalcost").append(totalcost);
+        $("#somename").append(inputtedname);
+        $("#place").append(inputtedlocation);
+        $(".name").show();
+        $("#name").append(inputtedname).val("");
+        $("form#myform").slideUp();
+        $(".cart").show();
+        $("#complete").on("click", function () {
+            $("#successtext").show();
+             $("#place").html(inputtedlocation);
+            $("#sname").append(inputtedname).val();
 
-    })
+        })
 
+    });
 });
-});
-
-
-
-
