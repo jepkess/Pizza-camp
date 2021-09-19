@@ -5,7 +5,7 @@ function Order(name, size, toppings, crust) {
     this.crust = crust;
 }
 Order.prototype.fullorder = function () {
-    return this.this.size + " ," + this.toppings + "," + this.crust;
+    return this.size + " ," + this.toppings + "," + this.crust;
 }
 
 
@@ -22,6 +22,7 @@ $(document).ready(function () {
     $("#check").on("click", function () {
         $(".cart").show();
         $("form#myform").hide();
+        
 
 
 
@@ -81,16 +82,24 @@ $("form#myform").submit(function (event) {
     var totalcost = 0;
     var totalcost = totalcost + total;
 
+  
     $("#totalcost").append(totalcost);
-    $("#somename").append(inputtedname);
-    // $("#place").append(inputtedlocation);
-    $(".name").hide();
-    $("#name").append(inputtedname).val("");
+    $("#somename").append(inputedname);
+    $("#place").append(inputtedlocation);
+    $(".name").show();
+    $("#name").append(inputedname).val("");
+    $("form#myform").slideUp();
+    $(".cart").show();
+    $("#complete").on("click", function () {
+        $("#successtext").show();
+        $("#place").html(inputtedlocation).val();
+        $("#sname").append(inputedname).val();
+
+    })
+
+});
 });
 
 
 
 
-
-
-});
