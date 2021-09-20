@@ -19,4 +19,4 @@ Vincent Kipkirui-Junior web Developer.
  ## contact information.
 
  ## licence
- 
+ This project is under [MIT](LICENCE.md)
