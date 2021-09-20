@@ -28,7 +28,7 @@ hr{
     
 
 }
-.cart{
+#cardi{
     display: none;
 }
 .footer{
@@ -43,4 +43,6 @@ hr{
 #successtext{
     display: none;
 }
+
+
 
