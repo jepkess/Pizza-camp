@@ -93,7 +93,7 @@ $(document).ready(function () {
   
         $("#totalcost").append(totalcost);
         $("#somename").append(inputtedname);
-        $("#place").append(inputtedlocation);
+        $("#location").append(inputtedlocation);
         $(".name").show();
         $("#name").append(inputtedname).val("");
         $("form#myform").slideUp();
