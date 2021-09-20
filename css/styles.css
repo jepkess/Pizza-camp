@@ -44,5 +44,8 @@ hr{
     display: none;
 }
 
-
+.imagesection {
+    cursor: pointer;
+    opacity: 0.8;
+}
 

@@ -94,15 +94,15 @@ $(document).ready(function () {
         $("#totalcost").append(totalcost);
         $("#somename").append(inputtedname);
         $("#location").append(inputtedlocation);
-        $(".name").show();
+        $(".name").hide();
         $("#name").append(inputtedname).val("");
         $("form#myform").slideUp();
         $(".cart").show();
         $("#complete").on("click", function () {
             $("#successtext").show();
-             $("#location").append(inputtedlocation).val();
-             $("#location").show();
+             $("#place").html(inputtedlocation).val();
             $("#sname").append(inputtedname).val();
+            
 
         })
 
