@@ -100,7 +100,7 @@ $(document).ready(function () {
         $(".cart").show();
         $("#complete").on("click", function () {
             $("#successtext").show();
-             $("#place").html(inputtedlocation).val();
+             $("#location").append(inputtedlocation).val();
             $("#sname").append(inputtedname).val();
             
 
