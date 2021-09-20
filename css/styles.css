@@ -3,7 +3,7 @@ body{
 
 }
 .container{
-    background-image: url(/images/image\ 6.jpeg);
+    background-image: url('/images/image\ 6.jpeg');
     background-repeat: none;
     background-size: cover;
 }
